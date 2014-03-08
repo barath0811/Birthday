@@ -1,0 +1,37 @@
+<h4><%= pluralize(@results.count,"Match") %> Found</h4> <br/>
+
+  <table class="table  table-striped">
+    <tr>
+      <th>&nbsp;</th>
+      <th>Name</th>
+<!--       <th>Isowner</th>
+ -->
+      <th>From</th>
+      <th>To</th>
+      <th>Start Time</th>
+      
+      <th>Seat(s) Available</th>
+      <th></th>      
+    </tr>
+
+  <% @results.each do |r| %>
+    <tr>
+      <td><%= image_tag(r.user.image_url, :height=>35, :width=>35) %></td>
+      <td><a href="<%='http://www.facebook.com/'+r.user.uid%>"  target="_blank"><i class="icon-facebook-sign"></i></a> &nbsp;<%= r.user.name %></td>
+<!--       <td>
+        <% if r.isowner == 0 %>
+          <%= image_tag("Close-2-icon.png") %>
+        <%else%>
+          <%= image_tag("Ok-icon.png") %>
+        <%end%>
+      </td>
+ -->
+      <td><%= r.startplace %></td>
+      <td><%= r.destination %></td>
+      <td><%= r.starttime %></td>
+      <td><%= r.available %></td>
+      <td><a href="#" class="btn btn-danger active"><i class="icon-white icon-play"></i> Request</a></td>      
+    </tr>
+  <% end %>
+  </table>
+

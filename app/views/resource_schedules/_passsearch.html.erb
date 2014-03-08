@@ -1,0 +1,31 @@
+<h3>  </h3>
+<%= form_for(@resource_schedule, url: findpassenger_path) do |f| %>
+<% @areas = getAreas %>
+  <%= hidden_field_tag :isPassenger, "1" %>
+      From <%= select_tag(:startplace, options_for_select(@areas, @defstartplace)) %>
+      To <%= select_tag(:destination, options_for_select(@areas, @defdest)) %>
+      At  
+      <div id="datepicker1" class="input-append date">
+	      <input data-format="dd/MM/yyyy" type="text" id="resource_schedule_startdate" name="resource_schedule_startdate" size="20" style="width:80px" value="<%= @defdate %>"></input>
+        <span class="add-on">
+          <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+          </i>
+        </span>
+      </div>
+      <div id="timepicker1" class="input-append date">
+        <input data-format="hh:mm" type="text" id="resource_schedule_starttime" name="resource_schedule_starttime" style="width:90px" value="<%= @deftime %>"></input>
+        <span class="add-on">
+          <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+          </i>
+        </span>
+      </div> &nbsp;&nbsp;
+  Available <input id="resource_schedule_available" name="resource_schedule[available]" size="30" style="width:30px" type="text">
+  <input id="resource_schedule_isacnonac" name="resource_schedule_isacnonac" type="checkbox" value="1"> AC Car
+
+
+<%= link_to image_tag("search_icon.jpg"), '', :onclick => 'searchFired();', :remote => true %>
+<br>
+<p class="text-left text-info">If you don't find any results that match your liking, please add your request for others to find you.</p><input name="commit" class="pull right btn btn-primary" type="submit" value="Add this search to Listings">
+<% end %>
+
+

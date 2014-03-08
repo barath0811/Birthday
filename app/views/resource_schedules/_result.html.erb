@@ -1,0 +1,10 @@
+<% if @results.count > 0 %>
+	<% if @searchcriteria == "car" %>
+		<%= render :partial => 'carresults' %>
+	<% else %>
+		<%= render :partial => 'passresults' %>
+	<% end %>
+<% else %>
+  No matching results <br/><br/>
+<% end %>
+
