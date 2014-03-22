@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Hackathon13Carpool::Application.load_tasks
+HappyBirthday::Application.load_tasks

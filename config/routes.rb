@@ -1,4 +1,4 @@
-Hackathon13Carpool::Application.routes.draw do
+HappyBirthday::Application.routes.draw do
  
 
   devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
