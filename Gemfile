@@ -30,7 +30,7 @@ gem "twitter-bootstrap-rails"
 gem 'jquery-rails'
 
 gem 'devise'
-
+gem 'rake', '~> 10.1.1'
 gem 'omniauth'
 gem 'omniauth-facebook'
 
