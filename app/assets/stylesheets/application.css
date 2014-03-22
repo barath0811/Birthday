@@ -9,6 +9,8 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require main
+ *= require dark
  *= require_tree .
  */
 
@@ -22,4 +24,9 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.counterDiv{
+	height: 700px;
+	margin-top: 200px;
 }

@@ -3,16 +3,9 @@ Hackathon13Carpool::Application.routes.draw do
 
   devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
 
-  resources :routes
-
-  resources :resource_schedules
 
 resources :users do
-   get 'addResource'
 
-   resources :user_resources do
-   end
-   resources :preferences
 end
 
 
@@ -23,17 +16,6 @@ end
     get 'start', :on => :collection
     
   end
-
-  get '/findcar' => 'resource_schedules#findcar', :as => 'findcar' 
-  post '/findcar' => 'resource_schedules#searchcar', :as => 'findcar'
-
-  get '/findpassenger' => 'resource_schedules#findpass', :as => 'findpassenger' 
-  post '/findpassenger' => 'resource_schedules#searchpass', :as => 'findpassenger'
-
-  get '/search' => 'resource_schedules#startsearch', :as => 'startsearch' 
-  get '/find' => 'resource_schedules#find', :as => 'find' 
-  post '/find' => 'resource_schedules#find', :as => 'find' 
-  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

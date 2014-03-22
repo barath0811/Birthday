@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ride Share</title>
+  <title>Happy birthday Bharathi :)</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= csrf_meta_tags %>
 </head>
@@ -9,6 +9,7 @@
     <!--[if lt IE 7]>
         <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
     <![endif]-->
+    
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -18,8 +19,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="/" title="Carpooling done the right way">
-            <img src="/assets/logo.jpg" alt="RideShare Logo" title="RideShare Logo" style="height:45px"/>
+          <a class="brand" href="/" title="Happy birthday dog">
+          <div>
+            <img src="/assets/logo1.jpg" alt="Happy Birthday dog" title="Happy Birthday dog" style="height:60px"/>
+            Happy birthday Bharathi :)</div>
           </a>
           <ul class="nav pull-right">
             <% if user_signed_in? %> 
@@ -27,16 +30,14 @@
               <li><%= image_tag(current_user.image_url, :height=>35, :width=>35) %></li>
               <li class="dropdown pull-right"><a href="#" data-toggle="dropdown" class="dropdown-toggle"><%=current_user.name%><strong class="caret"></strong></a>
                 <ul class="dropdown-menu">
-                  <li><%= link_to "Preferences", user_preferences_path(current_user) %></li>
                   <li><%= link_to "Logout", destroy_user_session_path, method:'delete' %></li>
                 </ul>
               </li>
-              <li><%= link_to "Search", startsearch_path%></li>
             <% else %> 
               <li> <p><a href="/users/auth/facebook" class="btn btn-primary btn-small active" ><i class="icon-facebook-sign"></i> &nbsp;Login with Facebook</a></p> </li>
             <% end %>
             
-            <li><a href="#">How it Works</a></li>
+            
           </ul>
 
         </div>  <!--end of container -->

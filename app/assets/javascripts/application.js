@@ -14,53 +14,57 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree .
+//= require jquery_countdown
 //
+
 $(document).ready(function(){
 
   $('#mySchedules_header').click(function(){
         $('#mySchedules').slideToggle('slow', function(){});});
 
-      });
 
-$(function() {
-    $('#datepicker1').datetimepicker({
-      language: 'en',
-      pickTime: false
-    });
-    $('#datepicker2').datetimepicker({
-      language: 'en',
-      pickTime: false
-    });
-    $('#timepicker1').datetimepicker({
-      language: 'en',
-      pickDate: false,
-      pick12HourFormat:true,
-      pickSeconds: false
-    });
-    $('#timepicker2').datetimepicker({
-      language: 'en',
-      pickDate: false,
-      pick12HourFormat:true,
-      pickSeconds: false
-    });
+      $('#countdown_dashboard').countDown({
+                targetDate: {
+                  'day':    2,
+                  'month':  4,
+                  'year':   2014,
+                  'hour':   0,
+                  'min':    0,
+                  'sec':    0
+                }
+              });
 
-    
+
 });
 
-function searchFired(){
 
-  var start = $("#startplace option:selected").val();
-  var dest = $("#destination option:selected").val();
-  var ispas = $('#isPassenger').val();
-
-  $.ajax({
-    url: "/find",
-    type: "POST",
-    data: {start:start, dest:dest, ispas:ispas },
-    success: function(data) {
-    },
-    error: function(XMLHttpRequest, textStatus, errorThrown) { 
-    }   
-  });
-
+// Set by specific date/time
+function set_by_date() {
+    $('#countdown_dashboard').stopCountDown();
+    $('#countdown_dashboard').setCountDown({
+        targetDate: {
+            'day':      2,
+            'month':    4,
+            'year':     2014,
+            'hour':     0,
+            'min':      0,
+            'sec':      0
+        }
+    });
+    $('#countdown_dashboard').startCountDown();
+}
+// Set by date/time offset
+function set_by_offset() {
+    $('#countdown_dashboard').stopCountDown();
+    $('#countdown_dashboard').setCountDown({
+        targetOffset: {
+            'day':      1,
+            'month':    1,
+            'year':     0,
+            'hour':     1,
+            'min':      1,
+            'sec':      1
+        }
+    });
+    $('#countdown_dashboard').startCountDown();
 }

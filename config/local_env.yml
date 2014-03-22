@@ -9,17 +9,17 @@
 
 # G-Mail Configuration 
 
-FEEDBACK_EMAIL_FROM: 'gshackathon@gmail.com>'
-FEEDBACK_EMAIL_TO: 'gshackathon@gmail.com'
+FEEDBACK_EMAIL_FROM: 'barath0811@gmail.com>'
+FEEDBACK_EMAIL_TO: 'barath0811@gmail.com'
 ADMIN_SMTP_ADDRESS: 'smtp.gmail.com'
 ADMIN_SMTP_PORT: '587'
 ADMIN_EMAIL_DOMAIN: 'gmail.com'
-ADMIN_EMAIL_USER: 'gshackathon@gmail.com'
-ADMIN_EMAIL_PASSWORD: 'gshackathon13'
+ADMIN_EMAIL_USER: 'barath0811@gmail.com'
+ADMIN_EMAIL_PASSWORD: 'ninethmay2'
 
 
-FACEBOOK_ID: '479313385516602'
-FACEBOOK_SECRET: 'a0948a7bf8531765814c592b04713ce3'
+FACEBOOK_ID: '506237729486599'
+FACEBOOK_SECRET: '0895b21f788d966753245603794e14d1'
 
-FACEBOOK_APP_DOMAIN: 'gsrideshare.herokuapp'
-HOSTNAME: 'http://gsrideshare.herokuapp:3000'
+FACEBOOK_APP_DOMAIN: 'localhost'
+HOSTNAME: 'http://localhost:3000'
