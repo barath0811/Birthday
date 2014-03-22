@@ -7,4 +7,4 @@ HappyBirthday::Application.initialize!
 
 ENV['SSL_CERT_FILE'] = 'C:/RailsInstaller/cacert.pem'
 
-ENV['RAILS_ENV'] ||= 'production'
+ENV['RAILS_ENV'] = 'production'

@@ -54,6 +54,7 @@ module HappyBirthday
     config.active_record.whitelist_attributes = true
 
     ActiveRecord::Base.configurations = Rails.application.config.database_configuration
+    config.assets.initialize_on_precompile = false
 
     # Enable the asset pipeline
     config.assets.enabled = true
