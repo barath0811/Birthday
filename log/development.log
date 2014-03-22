@@ -5131,3 +5131,206 @@ Started GET "/assets/dash.png" for 127.0.0.1 at 2014-03-22 19:01:53 +0530
 Served asset /dash.png - 200 OK (57ms)
 Started GET "/assets/logo1.jpg" for 127.0.0.1 at 2014-03-22 19:01:53 +0530
 Served asset /logo1.jpg - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-03-22 19:54:24 +0530
+Processing by HomesController#index as HTML
+  [1m[36mHome Load (1.0ms)[0m  [1mSELECT "homes".* FROM "homes" [0m
+  Rendered homes/_counter.html.erb (1.0ms)
+  Rendered homes/index.html.erb within layouts/application (44.0ms)
+Compiled jquery.js  (9ms)  (pid 5256)
+Compiled jquery_ujs.js  (1ms)  (pid 5256)
+Compiled twitter/bootstrap/bootstrap-transition.js  (2ms)  (pid 5256)
+Compiled twitter/bootstrap/bootstrap-alert.js  (2ms)  (pid 5256)
+Compiled twitter/bootstrap/bootstrap-modal.js  (2ms)  (pid 5256)
+Compiled twitter/bootstrap/bootstrap-dropdown.js  (3ms)  (pid 5256)
+Compiled twitter/bootstrap/bootstrap-scrollspy.js  (1ms)  (pid 5256)
+Compiled twitter/bootstrap/bootstrap-tab.js  (3ms)  (pid 5256)
+Compiled twitter/bootstrap/bootstrap-tooltip.js  (2ms)  (pid 5256)
+Compiled twitter/bootstrap/bootstrap-popover.js  (2ms)  (pid 5256)
+Compiled twitter/bootstrap/bootstrap-button.js  (1ms)  (pid 5256)
+Compiled twitter/bootstrap/bootstrap-collapse.js  (2ms)  (pid 5256)
+Compiled twitter/bootstrap/bootstrap-carousel.js  (2ms)  (pid 5256)
+Compiled twitter/bootstrap/bootstrap-typeahead.js  (2ms)  (pid 5256)
+Compiled twitter/bootstrap/bootstrap-affix.js  (1ms)  (pid 5256)
+Compiled twitter/bootstrap.js  (1329ms)  (pid 5256)
+Compiled bootstrap-datetimepicker.min.js  (3ms)  (pid 5256)
+Compiled bootstrap.js  (737ms)  (pid 5256)
+Compiled findcar.js  (690ms)  (pid 5256)
+Compiled homes.js  (657ms)  (pid 5256)
+Compiled jquery_countdown.js  (2ms)  (pid 5256)
+Compiled preferences.js  (586ms)  (pid 5256)
+Compiled resource_schedules.js  (619ms)  (pid 5256)
+Compiled routes.js  (697ms)  (pid 5256)
+Compiled user_resources.js  (653ms)  (pid 5256)
+Compiled application.js  (6902ms)  (pid 5256)
+Completed 200 OK in 7436ms (Views: 7291.1ms | ActiveRecord: 21.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-03-22 19:54:33 +0530
+Served asset /application.css - 304 Not Modified (54ms)
+
+
+Started GET "/assets/dark.css?body=1" for 127.0.0.1 at 2014-03-22 19:54:33 +0530
+Served asset /dark.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-03-22 19:54:33 +0530
+Served asset /main.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2014-03-22 19:54:33 +0530
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.min.css?body=1" for 127.0.0.1 at 2014-03-22 19:54:33 +0530
+Served asset /bootstrap-datetimepicker.min.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2014-03-22 19:54:33 +0530
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-03-22 19:54:34 +0530
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (84ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2014-03-22 19:54:34 +0530
+Served asset /homes.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-03-22 19:54:34 +0530
+Served asset /scaffolds.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-03-22 19:54:34 +0530
+Served asset /jquery.js - 304 Not Modified (44ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-03-22 19:54:34 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-03-22 19:54:34 +0530
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-03-22 19:54:34 +0530
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (20ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-03-22 19:54:34 +0530
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (23ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-03-22 19:54:34 +0530
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (63ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-03-22 19:54:34 +0530
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-03-22 19:54:34 +0530
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-03-22 19:54:34 +0530
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-03-22 19:54:34 +0530
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-03-22 19:54:35 +0530
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-03-22 19:54:35 +0530
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-03-22 19:54:35 +0530
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-03-22 19:54:35 +0530
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-03-22 19:54:35 +0530
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-22 19:54:35 +0530
+Served asset /twitter/bootstrap.js - 304 Not Modified (62ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.min.js?body=1" for 127.0.0.1 at 2014-03-22 19:54:35 +0530
+Served asset /bootstrap-datetimepicker.min.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-03-22 19:54:35 +0530
+Served asset /bootstrap.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/findcar.js?body=1" for 127.0.0.1 at 2014-03-22 19:54:35 +0530
+Served asset /findcar.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2014-03-22 19:54:35 +0530
+Served asset /homes.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_countdown.js?body=1" for 127.0.0.1 at 2014-03-22 19:54:35 +0530
+Served asset /jquery_countdown.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/preferences.js?body=1" for 127.0.0.1 at 2014-03-22 19:54:35 +0530
+Served asset /preferences.js - 304 Not Modified (40ms)
+
+
+Started GET "/assets/resource_schedules.js?body=1" for 127.0.0.1 at 2014-03-22 19:54:35 +0530
+Served asset /resource_schedules.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/routes.js?body=1" for 127.0.0.1 at 2014-03-22 19:54:35 +0530
+Served asset /routes.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/user_resources.js?body=1" for 127.0.0.1 at 2014-03-22 19:54:35 +0530
+Served asset /user_resources.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-03-22 19:54:36 +0530
+Served asset /application.js - 304 Not Modified (97ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2014-03-22 19:54:36 +0530
+Served asset /fontawesome-webfont.woff - 304 Not Modified (193ms)
+
+
+Started GET "/assets/dark_hours_dash.png" for 127.0.0.1 at 2014-03-22 19:54:36 +0530
+Served asset /dark_hours_dash.png - 304 Not Modified (48ms)
+
+
+Started GET "/assets/dark_seconds_dash.png" for 127.0.0.1 at 2014-03-22 19:54:36 +0530
+Served asset /dark_seconds_dash.png - 304 Not Modified (62ms)
+
+
+Started GET "/assets/dark_minutes_dash.png" for 127.0.0.1 at 2014-03-22 19:54:36 +0530
+Served asset /dark_minutes_dash.png - 304 Not Modified (69ms)
+
+
+Started GET "/assets/dark_days_dash.png" for 127.0.0.1 at 2014-03-22 19:54:36 +0530
+Served asset /dark_days_dash.png - 304 Not Modified (70ms)
+
+
+Started GET "/assets/logo1.jpg" for 127.0.0.1 at 2014-03-22 19:54:36 +0530
+Served asset /logo1.jpg - 304 Not Modified (65ms)
+
+
+Started GET "/assets/dark_weeks_dash.png" for 127.0.0.1 at 2014-03-22 19:54:36 +0530
+Served asset /dark_weeks_dash.png - 304 Not Modified (60ms)
