@@ -1,4 +1,5 @@
 <% if user_signed_in? %>   
+<% @uploadedImages = Images.where(:user_id => current_user.id) %>
 
   <div class="row-fluid">
     <div class="span12">
@@ -12,7 +13,22 @@
           </li>
         </ol>
         <div class="carousel-inner">
-          <div class="item active">
+            <% @uploadedImages.each_with_index do |i, index| %>
+              <% if index == 0%>
+                <div class="item active">
+              <%else%>
+                <div class="item">
+              <%end%>
+                <img alt=<%= i.caption %> src=<%= i.image_url %> />
+                <div class="fr"><%= image_tag(i.user.image_url, :height=>50, :width=>50) %></div>
+                <div class="carousel-caption">
+                  <h4>
+                    <%= i.caption %>
+                  </h4>
+                </div>
+              </div>
+            <% end %>
+          <!-- <div class="item active">
             <img alt="kfc" src="/assets/Bharathi/kfc.png" />
             <div class="carousel-caption">
               <h4>
@@ -27,8 +43,8 @@
                 Bharathi with saraku :)
               </h4>
             </div>
-          </div>
-          
+          </div> 
+           -->
         </div> <a data-slide="prev" href="#carousel-591747" class="left carousel-control">‹</a> <a data-slide="next" href="#carousel-591747" class="right carousel-control">›</a>
       </div>
     </div>

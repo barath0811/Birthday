@@ -1,12 +1,36 @@
 <% @image = Images.new %>
+<% @uploadedImages = Images.where(:user_id => current_user.id) %>
 
-
-<%= form_for images_path(@image), :html => {:multipart => true} do |i| %>
+<%= form_for images_path(@image),:remote => true, :html => {:multipart => true} do |i| %>
 
 	<div style="margin-top: 70px">
 
-		<%= i.file_field :image %>
+		<span class="control-group">
+			<%= label_tag(:image, "Image:", class:"control-label") %>
+			<%= i.file_field :image %><br/>
+		</span>
 
-		<%= i.submit "Upload Image", :class => "btn btn-success fr" %>
+		<div class="control-group">
+			<%= label_tag(:caption, "Caption:", class:"control-label") %>
+			<%= i.text_field :caption %><br/>
+		</div>
+		
+		
+		<div class="actions">
+			<%= i.submit "Upload Image", :class => "btn btn-success fr" %>
+		</div>
+
 	</div>
 <%end%>
+
+
+
+	<% @uploadedImages.each do |i| %>
+		<div class="span5" style="margin-bottom:10px; margin-left:0;">
+		<div class='circle fr'>
+		  <%= link_to('x', image_path(i), method: :delete, :class=>"fr")%>
+		</div>
+			
+			<%= image_tag i.image_url %>
+		</div>
+	<%end%>

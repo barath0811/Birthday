@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140323125240) do
+ActiveRecord::Schema.define(:version => 20140323164142) do
 
   create_table "audios", :force => true do |t|
     t.string   "audio"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20140323125240) do
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "caption"
   end
 
   add_index "images", ["user_id"], :name => "index_images_on_user_id"
