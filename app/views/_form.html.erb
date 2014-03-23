@@ -1,0 +1,81 @@
+<h1>Venue Images</h1>
+<% @images = @venue.images %>
+
+
+<% @image = Image.new%>
+
+
+<%= form_for [@venue, @hall, @image], :remote => true,  :html => {:multipart => true, :class => "ajax_form"} do |v| %>
+
+<% @image.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+<%end%>
+<% @halls = [] %>
+<% @hall_image_count = 0 %>
+<% @venue.halls.each do |h| %>
+	<% if h.images.size < 5 %>  <% @halls << h %> <% end %>
+	<% @hall_image_count = @hall_image_count + h.images.size %>
+<%end%>
+
+<% if @venue.images.count - @hall_image_count < 12 %>
+
+	<div class="actions">
+		<%= v.submit "Upload Image", :class => "btn btn-success fr" %>
+	</div>
+
+
+	<div>
+	
+		<div class="control-group">
+			<%= label_tag(:image, "Hall name:", class:"control-label") %>
+			
+			
+			<%= select_tag(:halls, options_from_collection_for_select(@halls, "id", "name"), {:include_blank => 'name of your blank prompt'}) %>
+		</div>
+
+		<div class="control-group">
+			<%= v.label(:image, "Venue Image:", class:"control-label") %>
+			<div class="controls"><%= v.file_field :image%></div>
+		</div>
+		<div class="control-group">
+			<%= v.label(:caption, "Caption:", class:"control-label") %>
+			<div class="controls"><%= v.text_field :caption %></div>
+		</div>
+	</div>
+<% end %>
+
+<div style="overflow:hidden;">
+<p><b>Venue General Images</b></p>
+<% @images.order("hall_id").each_with_index do |h, i| %>
+	<% if h.hall_id == nil %>
+		<div class="span3">
+				<%= link_to('x', venue_image_path(@venue,h), method: :delete, :remote=>true, :class=>"fr")%>
+			<%= image_tag url_for(:controller => "venues", :action => "show_image", :image_id => h.id), :class => "venue-img bottom10 right5"  %>
+			</br>
+			<%= best_in_place h, :caption, :path => caption_venue_image_path(@venue, h), :type => :textarea %>
+			
+		</div>
+	<%end%>
+<%end%>
+</div>
+</br>
+<% @venue.halls.each do |hl| %>
+<div class="row-fluid" style="overflow:hidden;">
+	<p><b><%= hl.name %></b></p>
+	<% @images.order("hall_id").each_with_index do |h, i| %>
+		<% if h.hall_id == hl.id %>
+			<div class="span3">
+				<%= link_to('x', venue_image_path(@venue,h), method: :delete, :remote=>true, :class=>"fr")%>
+			<%= image_tag url_for(:controller => "venues", :action => "show_image", :image_id => h.id), :class => "venue-img bottom10 right5"  %>
+			</br>
+			<%= best_in_place h, :caption, :path => caption_venue_image_path(@venue, h), :type => :textarea %>
+			
+			</div>
+		<%end%>
+	
+	<%end%>
+	</div>
+	</br>
+
+<% end %>
+<%end%>

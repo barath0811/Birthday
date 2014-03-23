@@ -9,7 +9,6 @@ resources :users do
 end
 
 
-
   resources :homes do
     get 'register'
 
@@ -17,6 +16,10 @@ end
     
   end
 
+
+  resources :images do
+    match :caption, :on => :member
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

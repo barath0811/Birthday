@@ -1,0 +1,12 @@
+<% @image = Images.new %>
+
+
+<%= form_for images_path(@image), :html => {:multipart => true} do |i| %>
+
+	<div style="margin-top: 70px">
+
+		<%= i.file_field :image %>
+
+		<%= i.submit "Upload Image", :class => "btn btn-success fr" %>
+	</div>
+<%end%>

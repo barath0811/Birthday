@@ -29,13 +29,9 @@ class HomesController < ApplicationController
     end
   end
 
-    def addResource
-    @user = User.find(params[:home_id])
-     @user.build_user_resource
-    respond_to do |format|
-      format.js # start.html.erb
-    end
-  end
+def image
+  
+end
 
   def updateuser
     @preference = Preference.new(params[:preference])
