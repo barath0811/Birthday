@@ -38,6 +38,8 @@ gem "best_in_place"
 
 gem 'carrierwave'
 
+gem 'simple_audioplayer'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

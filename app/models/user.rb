@@ -8,8 +8,10 @@ class User < ActiveRecord::Base
  
   
   has_many :images
+  has_many :audios
+  has_one :wish
 
-  accepts_nested_attributes_for :images
+  accepts_nested_attributes_for :images, :wish, :audios
 
   validates :name, :presence => true
 

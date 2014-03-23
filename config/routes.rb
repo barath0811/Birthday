@@ -1,6 +1,9 @@
 HappyBirthday::Application.routes.draw do
  
 
+  resources :wishes
+
+
   devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
 
 
@@ -20,6 +23,8 @@ end
   resources :images do
     match :caption, :on => :member
   end
+
+  resources :audios
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

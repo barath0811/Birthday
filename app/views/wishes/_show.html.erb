@@ -1,0 +1,30 @@
+
+
+<div style="margin-top:70px;">
+<h5>I am working on the css to display this wish. It is not going look to like this :)</h5>
+	<p id="notice"><%= notice %></p>
+
+	<div class="fl"><%= image_tag(current_user.image_url, :height=>50, :width=>50) %></div>
+	<br/><br/><br/><br/><br/>
+	<div class="fl">
+	  <b>Title:</b>
+	  <%= @wish.title %>
+	</div>
+
+	<br/>
+	<div class="fl">
+	  <b>Address:</b>
+	  <%= @wish.address %>
+	</div>
+
+	<br/>
+	<div class="fl">
+	  <b>Wish:</b>
+	  <%= @wish.wish %>
+	</div>
+
+	<br/>
+
+	<%= link_to 'Edit', edit_wish_path(@wish) %> |
+	<%= link_to 'Back', wishes_path %>
+</div>

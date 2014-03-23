@@ -15,6 +15,7 @@
 //= require twitter/bootstrap
 //= require_tree .
 //= require jquery_countdown
+//= require simple_audioplayer
 //
 
 $(document).ready(function(){

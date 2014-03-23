@@ -1,0 +1,46 @@
+<% @audio = Audios.new %>
+<% @uploadedAudios = Audios.where(:user_id => current_user.id) %>
+
+<%= form_for audios_path(@audio),:remote => true, :html => {:multipart => true} do |i| %>
+
+	<div style="margin-top: 70px">
+
+		<h4>Only mp3 works now. </h4>
+		
+		<span class="control-group">
+			<%= label_tag(:audio, "Audio file:", class:"control-label") %>
+			<%= i.file_field :audio %><br/>
+		</span>
+
+		<div class="control-group">
+			<%= label_tag(:title, "Title (optional). This will be displayed when the audio plays:", class:"control-label") %>
+			<%= i.text_field :title %><br/>
+		</div>
+		
+		
+		<div class="actions">
+			<%= i.submit "Upload Recording", :class => "btn btn-success fr" %>
+		</div>
+
+	</div>
+<%end%>
+
+<ul data-music-container>
+<% @uploadedAudios.each do |a| %>
+	
+        <li data-track-container>
+        
+            <%= a.title %>
+            
+            <a data-audio-track data-behavior="play_audio_track" data-id="1" data-title=<%= a.title %> data-url=<%=a.audio_url %> href="#">
+              	<i class="icon-play"></i>
+            </a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class='circle'>
+			  	<%= link_to('Delete', audio_path(a), method: :delete)%>
+			</div>
+            
+            
+        </li>
+<% end%>
+</ul>
