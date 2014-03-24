@@ -25,6 +25,7 @@ class WishesController < ApplicationController
   # GET /wishes/new.json
   def new
     @wish = current_user.wish
+    @wish = Wish.new if @wish.nil?
 
     respond_to do |format|
       format.html # new.html.erb
