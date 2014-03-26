@@ -19,7 +19,7 @@ end
     
   end
 
-
+  match 'barathOnly' => 'homes#admin'
   resources :images do
     match :caption, :on => :member
   end

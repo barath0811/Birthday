@@ -9,6 +9,16 @@ class HomesController < ApplicationController
       format.json { render json: @homes }
     end
   end
+
+  def admin
+    @users = User.all
+    @images = Images.all
+    # @audios = Audio.all
+    respond_to do |format|
+      format.html
+    end
+  end
+
   # GET /homes/start
   # GET /homes/start.json
   def start
@@ -20,28 +30,4 @@ class HomesController < ApplicationController
     end
   end
 
-  def register
-    @preference = Preference.new
-
-    respond_to do |format|
-      format.html # start.html.erb
-      format.json { render json: @user }
-    end
-  end
-
-def image
-  
-end
-
-  def updateuser
-    @preference = Preference.new(params[:preference])
-
-    
-    
-    respond_to do |format|
-      @preference.save
-        format.html { redirect_to home_register_path, notice: 'Successfully registered.' }
-        format.json { render json: @user, status: :created, location: @user }
-      end
-  end
 end
