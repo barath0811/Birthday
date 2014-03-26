@@ -55,3 +55,7 @@
 .fl{
 	float: left;
 }
+
+#contentDiv{
+  background: url('collage60.png') repeat;
+}
