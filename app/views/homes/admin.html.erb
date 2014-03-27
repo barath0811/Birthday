@@ -16,3 +16,24 @@
 		</tr>
 	<% end %>
 </table>
+
+
+<table>
+	<% @audios.each do |a| %>
+		<tr>
+			<td><%= a.user.name %></td>
+			<td><%= a.audio_url %></td>
+		</tr>
+	<% end %>
+</table>
+
+
+<table>
+	<% @wishes.each do |w| %>
+		<tr>
+			<td><%= w.user.name %></td>
+			<td><%= w.title %></td>
+			<td><%= w.wish %></td>
+		</tr>
+	<% end %>
+</table>

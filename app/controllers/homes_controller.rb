@@ -13,7 +13,8 @@ class HomesController < ApplicationController
   def admin
     @users = User.all
     @images = Images.all
-    # @audios = Audio.all
+    @audios = Audios.all
+    @wishes = Wish.all
     respond_to do |format|
       format.html
     end
