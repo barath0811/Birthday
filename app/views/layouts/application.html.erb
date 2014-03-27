@@ -19,11 +19,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="/" title="Happy birthday dog">
+          <a id="homeHeader" class="brand" href="/" title="Happy birthday dog">
           <div>
             <img src="/assets/logo1.jpg" alt="Happy Birthday dog" title="Happy Birthday dog" style="height:60px"/>
             Happy birthday Bharathi :)</div>
           </a>
+          
+          
+
           <ul class="nav pull-right">
             <% if user_signed_in? %> 
               
@@ -34,8 +37,11 @@
                 </ul>
               </li>
               <li><%= link_to "Wish", new_wish_path %></li>
-              <li><%= link_to "Images", images_path %></li>
               <li><%= link_to "Recordings", audios_path %></li>
+              <li><%= link_to "Images", images_path %></li>
+              <a id="audioHome" data-audio-track data-behavior="play_audio_track" data-id="1" data-title='birthday' data-url='/assets/birthday.mp3' href="#">
+                <%= image_tag 'audio.gif' %>
+            </a>
             <% else %> 
               <li> <p><a href="/users/auth/facebook" class="btn btn-primary btn-small active" ><i class="icon-facebook-sign"></i> &nbsp;Login with Facebook</a></p> </li>
             <% end %>
