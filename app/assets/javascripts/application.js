@@ -20,22 +20,41 @@
 
 $(document).ready(function(){
 
+  $('#contentDiv').height($(document).height());
+
   $('#mySchedules_header').click(function(){
         $('#mySchedules').slideToggle('slow', function(){});});
 
+  var flashStopDate = new Date(2014, 04, 02, 10, 0, 0, 0);
+  var birthday = new Date(2014, 04, 02, 0, 0, 0, 0);
 
+
+  if(new Date() < birthday)
+  {
       $('#countdown_dashboard').countDown({
                 targetDate: {
                   'day':    2,
                   'month':  4,
                   'year':   2014,
-                  'hour':   0,
-                  'min':    0,
-                  'sec':    0
+                  'hour':   00,
+                  'min':    00,
+                  'sec':    00
+                },
+                onComplete:function(){
+                  $('#counterDiv').html('<object width="640" height="520" style="visible:none" data="assets/Happybirthday.swf"></object>');
+                  
                 }
               });
-
-
+    }
+    else if(new Date() < flashStopDate){
+      $('#counterDiv').html('<object width="640" height="520" style="visible:none" data="assets/Happybirthday.swf"></object>')
+    }
+    else{
+      if(Math.floor((Math.random()*10)+1)%2)
+        $('#counterDiv').html('<img src="/assets/mywish.gif"></img>')
+      else
+        $('#counterDiv').html('<img src="/assets/mywish1.gif"></img>')
+    }
 });
 
 

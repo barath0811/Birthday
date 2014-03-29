@@ -37,7 +37,10 @@
 
 <% @wish = current_user.wish %>
 <% unless @wish.nil? %>
-<div>
+
+
+
+<div class="fl">
     <div class="fl"><%= image_tag(current_user.image_url, :height=>50, :width=>50) %></div>
 
     <div >
@@ -61,5 +64,11 @@
 <% end %>
   </div>
 <% else %>
+
+<div id="counterDiv">
   <%= render partial: 'counter' %> 
+  </div>
+  
+   
+</div>
 <% end %>
