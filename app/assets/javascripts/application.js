@@ -15,10 +15,19 @@
 //= require twitter/bootstrap
 //= require_tree .
 //= require jquery_countdown
+//= require jquery_cycle
 //= require simple_audioplayer
 //
 
 $(document).ready(function(){
+
+  $('#allWishes').cycle({ 
+      fx:     'shuffle', 
+      speed:  'medium', 
+      timeout: 0, 
+      next:   '#next2', 
+      prev:   '#prev2'
+  });
 
   $('#contentDiv').height($(document).height());
 

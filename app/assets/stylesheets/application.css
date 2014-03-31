@@ -11,13 +11,68 @@
  *= require_self
  *= require main
  *= require dark
+ *= require font-awesome
  *= require_tree .
  */
+
+
+@font-face {
+  font-family: 'Precious';
+  src: url('/assets/Precious.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#prev2{
+  text-align: left;
+}
+
+#next2{
+  text-align: right;
+}
+
+  #wishTitle{
+    font-family: 'Precious';
+  }
+
+  #wisherName{
+    text-align: right;
+    font-family: "Precious";
+    font-size: 200%;
+  }
+
+  #wishTotalDiv{
+    margin-top: 150px;
+  }
+
+  #wishTotalDiv p{
+    word-wrap: break-word;
+    font-family: 'Precious';
+    line-height: 200%;
+  }
+
+ #wishDiv p{
+  word-wrap: break-word;
+  font-family: 'Precious';
+  line-height: 200%;
+ }
+
+ #addressDiv h4{
+  text-align: left;
+  font-family: 'Precious';
+  font-size: 200%;
+ }
+
+ #wishDiv p{
+  text-align: left;
+  font-size: 200%;
+ }
 
 #audioHome:hover{
   background-color: #FFFFFF;
   
 }
+
 
 .carousel-caption {
     top: 0;
@@ -63,4 +118,5 @@
 
 #contentDiv{
   background: url('collage60.png') repeat;
+  
 }

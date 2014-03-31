@@ -2,7 +2,10 @@ class WishesController < ApplicationController
   # GET /wishes
   # GET /wishes.json
   def index
-    @wishes = Wish.all
+    @wishes = nil
+    if current_user.name == "Barath Palanichamy" || current_user.name == "Bharathi Priya"
+      @wishes = Wish.all
+    end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -26,7 +29,7 @@ class WishesController < ApplicationController
   def new
     @wish = current_user.wish
     @wish = Wish.new if @wish.nil?
-
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @wish }

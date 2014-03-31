@@ -1,3 +1,32 @@
-<h3>You can type your wish/memories/etc. Only Bharathi is going to read this. Feel free to type.</h3>
+<div id="allWishes">
 
-<%= render 'form' %>
+	<% @wishes.each do |w| %>
+		<div id="wishTotalDiv" class="row-fluid" >
+	      <div class="fl"><%= image_tag(w.user.image_url, :height=>50, :width=>50) %></div>
+
+	      <div >
+	        <h2 id="wishTitle"><b><%= w.title %></b></h2>
+	      </div>
+
+	      
+	      <div id="addressDiv" class="fl">
+	        <h4><b><%= w.address %></b></h4>
+	      </div>
+
+	      <br/><br/>
+	      <div id="wishDiv">
+	        
+	        <p style="width=80%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= w.wish %></p>
+	      </div>
+
+	      <br/><br/>
+
+	      <p id="wisherName">- <%= w.user.name %></p>
+			
+			<a href="#" id="prev2">Prev</a>
+			<a href="#" id="next2">Next</a>	      
+	  </div>
+	  	
+	<% end %>
+	
+</div>
