@@ -1,5 +1,10 @@
 <% if user_signed_in? %>   
-<% @uploadedImages = Images.where(:user_id => current_user.id) %>
+
+<% if current_user.name == "Barath Palanichamy" || current_user.name == "Bharathi Priya" %>
+  <% @uploadedImages = Images.all %>
+<% else %>
+  <% @uploadedImages = Images.where(:user_id => current_user.id) %>
+<% end %>
 
   <div class="row-fluid">
     <div class="span12">
@@ -36,32 +41,34 @@
 
 
 <% @wish = current_user.wish %>
+
+
+<% if current_user.name != "Barath Palanichamy" && current_user.name != "Bharathi Priya" %>
+
 <% unless @wish.nil? %>
+  <div class="fl">
+      <div class="fl"><%= image_tag(current_user.image_url, :height=>50, :width=>50) %></div>
 
+      <div>
+        <b><%= @wish.title %></b>
+      </div>
 
+      
+      <div >
+        <b><%= @wish.address %></b>
+      </div>
 
-<div class="fl">
-    <div class="fl"><%= image_tag(current_user.image_url, :height=>50, :width=>50) %></div>
+      <br/>
+      <div >
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <%= @wish.wish %>
+      </div>
 
-    <div >
-      <b><%= @wish.title %></b>
-    </div>
+      <br/>
 
-    
-    <div >
-      <b><%= @wish.address %></b>
-    </div>
-
-    <br/>
-    <div >
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <%= @wish.wish %>
-    </div>
-
-    <br/>
-
-</div>
+  </div>
 <% end %>
+<%end%>
   </div>
 <% else %>
 
