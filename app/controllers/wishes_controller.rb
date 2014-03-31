@@ -3,7 +3,7 @@ class WishesController < ApplicationController
   # GET /wishes.json
   def index
     @wishes = nil
-    if current_user.name == "Barath Palanichamy" || current_user.name == "Bharathi Priya"
+    if current_user.name == "Barath Palanichamy" || current_user.name == "Bharathi Priya" ?
       @wishes = Wish.all
     end
 

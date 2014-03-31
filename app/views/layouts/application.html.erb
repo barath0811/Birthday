@@ -37,12 +37,12 @@
                 </ul>
               </li>
 
-              <% if current_user.name != "Barath Palanichamy" && current_user.name != "Bharathi Priya" %>
-                <li><%= link_to "Wish", new_wish_path %></li>
-                <li><%= link_to "Recordings", audios_path %></li>
-                <li><%= link_to "Images", images_path %></li>
-              <% else %>
+              <% if current_user.name == "Barath Palanichamy" || current_user.name == "Bharathi Priya" %>
                 <li><%= link_to "My wishes", wishes_path %></li>
+              <% else %>
+                  <li><%= link_to "Wish", new_wish_path %></li>
+                  <li><%= link_to "Recordings", audios_path %></li>
+                  <li><%= link_to "Images", images_path %></li>
               <% end %>
               <a id="audioHome" data-audio-track data-behavior="play_audio_track" data-id="1" data-title='birthday' data-url='/assets/birthday.mp3' href="#">
                 <%= image_tag 'audio.gif' %>
