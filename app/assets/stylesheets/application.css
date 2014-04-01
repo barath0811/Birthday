@@ -22,12 +22,22 @@
   font-style: normal;
 }
 
+#allWishes{
+  overflow: hidden;
+  margin-left:auto;
+  margin-right:auto;
+  width: 80%;
+
+}
+
 #prev2{
   text-align: left;
+  z-index: 999;
 }
 
 #next2{
   text-align: right;
+  z-index: 999;
 }
 
   #wishTitle{
@@ -40,11 +50,16 @@
     font-size: 200%;
   }
 
-  #wishTotalDiv{
-    margin-top: 150px;
+  .wishNav{
+    margin-top: 25px;
   }
 
-  #wishTotalDiv p{
+  .wishTotalDiv{
+    margin-top: 150px;
+    min-width: 80%;  
+  }
+
+  .wishTotalDiv p{
     word-wrap: break-word;
     font-family: 'Precious';
     line-height: 200%;

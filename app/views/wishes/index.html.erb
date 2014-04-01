@@ -1,7 +1,13 @@
+<span>
+	<a href="#" class="fr wishNav" id="next2">Next</a>
+	<a href="#" class="fl wishNav" id="prev2">Prev</a>
+</span>
+
+
 <div id="allWishes">
 
 	<% @wishes.each do |w| %>
-		<div id="wishTotalDiv" class="row-fluid" >
+		<div class="wishTotalDiv" class="row-fluid" >
 	      <div class="fl"><%= image_tag(w.user.image_url, :height=>50, :width=>50) %></div>
 
 	      <div >
@@ -23,10 +29,10 @@
 
 	      <p id="wisherName">- <%= w.user.name %></p>
 			
-			<a href="#" id="prev2">Prev</a>
-			<a href="#" id="next2">Next</a>	      
+			
 	  </div>
 	  	
 	<% end %>
 	
 </div>
+
