@@ -34,20 +34,20 @@ $(document).ready(function(){
   $('#mySchedules_header').click(function(){
         $('#mySchedules').slideToggle('slow', function(){});});
 
-  var flashStopDate = new Date(2014, 04, 02, 10, 0, 0, 0);
-  var birthday = new Date(2014, 04, 02, 0, 0, 0, 0);
+  var flashStopDate = new Date(2014, 03, 02, 10, 0, 0, 0);
+  var birthday = new Date(2014, 03, 02, 0, 0, 0, 0);
 
 
   if(new Date() < birthday)
   {
       $('#countdown_dashboard').countDown({
                 targetDate: {
-                  'day':    2,
+                  'day':    1,
                   'month':  4,
                   'year':   2014,
-                  'hour':   00,
-                  'min':    00,
-                  'sec':    00
+                  'hour':   23,
+                  'min':    45,
+                  'sec':    30
                 },
                 onComplete:function(){
                   $('#counterDiv').html('<object width="640" height="520" style="visible:none" data="assets/Happybirthday.swf"></object>');
